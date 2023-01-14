@@ -11,6 +11,7 @@ import HomeIcon from "../assets/home.svg";
 import HistoricIcon from "../assets/history.svg";
 import ProfileIcon from "../assets/profile.svg";
 import { useTheme } from "native-base";
+import { Platform } from "react-native";
 
 type AppRoutes = {
   home: undefined;
@@ -32,11 +33,13 @@ export function AppRoutes() {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarActiveTintColor: theme.colors.green[500],
-        tabBarInactiveTintColor: theme.colors.gray[100],
+        tabBarInactiveTintColor: theme.colors.gray[200],
         tabBarStyle: {
-          position: "absolute",
+          height: Platform.OS === "android" ? "auto" : 96,
+          paddingBottom: theme.sizes[8],
+          paddingTop: theme.sizes[8],
           borderTopWidth: 0,
-          backgroundColor: theme.colors.gray[800],
+          backgroundColor: theme.colors.gray[600],
         },
       }}
     >
