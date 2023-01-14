@@ -19,6 +19,7 @@ export function SignUp() {
         <Center>
           <Image
             source={BackgroundImg}
+            defaultSource={BackgroundImg}
             alt="Uma mulher e um homem pedalando em uma bicicleta ergométrica na academia"
             resizeMode="contain"
             position="absolute"
