@@ -1,6 +1,6 @@
 import { IInputProps, Input as NativeBaseInput } from "native-base";
 
-export function Input({ ...rest }: IInputProps) {
+export function Input({ ...props }: IInputProps) {
   return (
     <NativeBaseInput
       backgroundColor="gray.700"
@@ -17,7 +17,7 @@ export function Input({ ...rest }: IInputProps) {
         borderWidth: 1,
         borderColor: "green.500",
       }}
-      {...rest}
+      {...props}
     />
   );
 }

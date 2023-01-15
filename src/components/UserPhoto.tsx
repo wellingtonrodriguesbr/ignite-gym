@@ -4,7 +4,7 @@ type UserPhotoProps = IImageProps & {
   size: number;
 };
 
-export function UserPhoto({ size, ...rest }: UserPhotoProps) {
+export function UserPhoto({ size, ...props }: UserPhotoProps) {
   return (
     <Image
       w={size}
@@ -12,7 +12,7 @@ export function UserPhoto({ size, ...rest }: UserPhotoProps) {
       rounded="full"
       borderWidth={2}
       borderColor="gray.400"
-      {...rest}
+      {...props}
     />
   );
 }
